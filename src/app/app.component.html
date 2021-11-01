@@ -1,0 +1,27 @@
+<div class="container mt-0">
+  <alert type="success">
+    <h2 style="color: blue;font-size: 22px">Move Data Between Two Component</h2>
+  </alert>
+
+
+  <h2>For Pass String</h2>
+
+  <div class="row">
+    <div class="col-md-5">
+      <input #userInput type="text" placeholder="Enter any text">
+      <button (click)="sendToChild(userInput.value)">Send To Child </button>
+      <p>Child Says = {{childMessage}}</p>
+    </div>
+
+    <div class="col-md-5 align-items-center">
+<!--      For pass String To a child component-->
+<!--      Here [data]="message for send data to to child and
+           (event)="receivedMessage($event) for send data to parent
+ -->
+      <app-child [data]="message" (event)="receivedMessage($event)"></app-child>
+    </div>
+  </div>
+</div>
+
+
+

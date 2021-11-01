@@ -1,0 +1,10 @@
+<h2 style="color: blue;">This is Child Component</h2>
+
+<div class="container">
+  <input #userInput type="text" placeholder="Enter any text">
+  <button (click)="sendToParent(userInput.value)">Send To Parent </button>
+  <p>
+    Parent Says = {{data}}
+  </p>
+</div>
+
